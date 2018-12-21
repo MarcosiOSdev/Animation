@@ -18,7 +18,9 @@ class LoginView: UIViewController {
     @IBOutlet weak var loginTxtFieldLayoutX: NSLayoutConstraint!
     @IBOutlet weak var passwordTxtFieldLayoutX: NSLayoutConstraint!
     
-    init() {
+    weak var coordinator: Coordinator?
+    init(coordinator: Coordinator) {
+        self.coordinator = coordinator
         super.init(nibName: String(describing: LoginView.self), bundle: nil)
     }
     

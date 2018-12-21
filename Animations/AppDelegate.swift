@@ -14,12 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
-        let window = UIWindow()
-        self.window = window
-        self.window?.rootViewController = MainView()
-        self.window?.makeKeyAndVisible()        
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {        
+        self.window = UIWindow()
+        let appCoordinate = AppCoordinator(window: self.window!)
+        appCoordinate.start()
         return true
     }
 
