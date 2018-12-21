@@ -12,7 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainView" customModule="Animations" customModuleProvider="target">
             <connections>
-                <outlet property="tableView" destination="Pka-37-xtZ" id="ZwX-Wp-gLe"/>
+                <outlet property="tableView" destination="Pka-37-xtZ" id="AL4-q3-fPa"/>
+                <outlet property="view" destination="iN0-l3-epB" id="fq8-cl-oC7"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -23,10 +24,6 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Pka-37-xtZ">
                     <rect key="frame" x="0.0" y="40" width="375" height="627"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="lQF-en-DQr"/>
-                        <outlet property="delegate" destination="-1" id="Du4-1u-gKF"/>
-                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18A1F8EF21CC621E004DF8DB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1F8ED21CC621E004DF8DB /* LoginView.swift */; };
+		18A1F8F021CC621E004DF8DB /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A1F8EE21CC621E004DF8DB /* LoginView.xib */; };
 		D05C3BFC21CC3623004FA174 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C3BFB21CC3623004FA174 /* AppDelegate.swift */; };
 		D05C3BFE21CC3623004FA174 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D05C3BFD21CC3623004FA174 /* MainView.swift */; };
 		D05C3C0321CC3625004FA174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D05C3C0221CC3625004FA174 /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18A1F8ED21CC621E004DF8DB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Animations/Basic/LoginView.swift; sourceTree = SOURCE_ROOT; };
+		18A1F8EE21CC621E004DF8DB /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoginView.xib; path = Animations/Basic/LoginView.xib; sourceTree = SOURCE_ROOT; };
 		D05C3BF821CC3623004FA174 /* Animations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D05C3BFB21CC3623004FA174 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D05C3BFD21CC3623004FA174 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -35,6 +39,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18A1F8EC21CC61EF004DF8DB /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				18A1F8ED21CC621E004DF8DB /* LoginView.swift */,
+				18A1F8EE21CC621E004DF8DB /* LoginView.xib */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
+		18A1F8F121CC657F004DF8DB /* Coordinate */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinate;
+			sourceTree = "<group>";
+		};
 		D05C3BEF21CC3623004FA174 = {
 			isa = PBXGroup;
 			children = (
@@ -54,6 +74,8 @@
 		D05C3BFA21CC3623004FA174 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				18A1F8F121CC657F004DF8DB /* Coordinate */,
+				18A1F8EC21CC61EF004DF8DB /* Basic */,
 				D05C3C0D21CC37D0004FA174 /* Main */,
 				D05C3BFB21CC3623004FA174 /* AppDelegate.swift */,
 				D05C3C0221CC3625004FA174 /* Assets.xcassets */,
@@ -132,6 +154,7 @@
 			files = (
 				D05C3C0F21CC37E1004FA174 /* MainView.xib in Resources */,
 				D05C3C0621CC3625004FA174 /* LaunchScreen.storyboard in Resources */,
+				18A1F8F021CC621E004DF8DB /* LoginView.xib in Resources */,
 				D05C3C0321CC3625004FA174 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -143,6 +166,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18A1F8EF21CC621E004DF8DB /* LoginView.swift in Sources */,
 				D05C3BFE21CC3623004FA174 /* MainView.swift in Sources */,
 				D05C3BFC21CC3623004FA174 /* AppDelegate.swift in Sources */,
 			);

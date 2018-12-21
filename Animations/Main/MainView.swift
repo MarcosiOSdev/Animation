@@ -8,6 +8,11 @@
 
 import UIKit
 
+enum TypeOfMenu: Int {
+    case basic = 0
+    case transition, keyframing
+}
+
 class MainView: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let menuList = ["Basic", "Transition", "KeyFraming Animation"]
@@ -21,6 +26,7 @@ class MainView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         self.tableView.delegate = self
         self.tableView.dataSource = self
     }
@@ -28,8 +34,15 @@ class MainView: UIViewController {
 
 
 extension MainView: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(self.menuList[indexPath.row])
+        let type = TypeOfMenu(rawValue: indexPath.row)
+        switch type {
+        case .basic?:
+            self.present(LoginView(), animated: true, completion: nil)
+        default:
+            self.present(LoginView(), animated: true, completion: nil)
+        }        
     }
 }
 
@@ -43,6 +56,4 @@ extension MainView: UITableViewDataSource {
         cell.textLabel?.text = menuList[indexPath.row]
         return cell
     }
-    
-    
 }
