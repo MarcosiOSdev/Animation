@@ -9,7 +9,7 @@
 import UIKit
 
 enum MainFlow: Event {    
-    case basic
+    case basic, replacing
 }
 
 enum TypeOfMenu: Int {
@@ -20,10 +20,10 @@ enum TypeOfMenu: Int {
 class MainView: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let menuList = ["Basic", "Replacing", "KeyFraming Animation"]
-    weak var coordinator: Coordinator?
+    var coordinator: Coordinator?
     init(coordinator: Coordinator) {
-        self.coordinator = coordinator
         super.init(nibName: String(describing: MainView.self), bundle: nil)
+        self.coordinator = coordinator
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,8 +33,7 @@ class MainView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        
     }
 }
 
@@ -42,12 +41,13 @@ class MainView: UIViewController {
 extension MainView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let type = TypeOfMenu(rawValue: indexPath.row)
         switch type {
         case .basic?:
             self.coordinator?.handle(MainFlow.basic)
         case .replacing?:
-            self.present(ReplaceView(), animated: true, completion: nil)
+            self.coordinator?.handle(MainFlow.replacing)
         default:
             self.coordinator?.handle(MainFlow.basic)
         }        

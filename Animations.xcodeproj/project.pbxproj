@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		18A1F8EF21CC621E004DF8DB /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A1F8ED21CC621E004DF8DB /* LoginView.swift */; };
 		18A1F8F021CC621E004DF8DB /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A1F8EE21CC621E004DF8DB /* LoginView.xib */; };
+		D025339321CD71FB004D8776 /* ReplacingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D025339221CD71FB004D8776 /* ReplacingCoordinator.swift */; };
 		D030606221CD21FF0015FDAB /* ReplaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030606021CD21FF0015FDAB /* ReplaceView.swift */; };
 		D030606321CD21FF0015FDAB /* ReplaceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D030606121CD21FF0015FDAB /* ReplaceView.xib */; };
 		D030606621CD34040015FDAB /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D030606521CD34040015FDAB /* Coordinator.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		18A1F8ED21CC621E004DF8DB /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = Animations/Basic/LoginView.swift; sourceTree = SOURCE_ROOT; };
 		18A1F8EE21CC621E004DF8DB /* LoginView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoginView.xib; path = Animations/Basic/LoginView.xib; sourceTree = SOURCE_ROOT; };
+		D025339221CD71FB004D8776 /* ReplacingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplacingCoordinator.swift; sourceTree = "<group>"; };
 		D030606021CD21FF0015FDAB /* ReplaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReplaceView.swift; sourceTree = "<group>"; };
 		D030606121CD21FF0015FDAB /* ReplaceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReplaceView.xib; sourceTree = "<group>"; };
 		D030606521CD34040015FDAB /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			children = (
 				D030606021CD21FF0015FDAB /* ReplaceView.swift */,
 				D030606121CD21FF0015FDAB /* ReplaceView.xib */,
+				D025339221CD71FB004D8776 /* ReplacingCoordinator.swift */,
 			);
 			path = Replacing;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				D030606821CD34240015FDAB /* AppCoordinator.swift in Sources */,
 				D030606221CD21FF0015FDAB /* ReplaceView.swift in Sources */,
 				D030606A21CD4F150015FDAB /* BasicCoordinator.swift in Sources */,
+				D025339321CD71FB004D8776 /* ReplacingCoordinator.swift in Sources */,
 				D030606621CD34040015FDAB /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

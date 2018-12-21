@@ -8,11 +8,17 @@
 
 import UIKit
 
+enum ReplaceFlow: Event {
+    case finish
+}
+
 class ReplaceView: UIViewController {
 
     @IBOutlet weak var closerButton: UIButton!
+    var coordinator: Coordinator?
     
-    init() {
+    init(coordinator: Coordinator) {
+        self.coordinator = coordinator
         super.init(nibName: String(describing: ReplaceView.self), bundle: nil)
     }
     required init?(coder aDecoder: NSCoder) {
@@ -62,7 +68,7 @@ class ReplaceView: UIViewController {
         self.view.addSubview(blurEffectView)
     }
     @IBAction func didTapCloseButton(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.coordinator?.handle(ReplaceFlow.finish)
     }
     
 

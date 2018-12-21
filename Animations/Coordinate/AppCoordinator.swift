@@ -33,6 +33,10 @@ class AppCoordinator: Coordinator {
         basicCoordinator.start()
     }
     
+    private func startReplacing() {
+        let replacingCoordinator = ReplacingCoordinator(window: self.window, parentCoordinator: self, previousView: currentView)
+        replacingCoordinator.start()
+    }
 }
 
 
@@ -41,6 +45,8 @@ extension AppCoordinator {
         switch action {
         case MainFlow.basic:
             self.startBasicView()
+        case MainFlow.replacing:
+            self.startReplacing()
         default:
             break
         }

@@ -1,5 +1,5 @@
 //
-//  BasicCoordinator.swift
+//  ReplacingCoordinator.swift
 //  Animations
 //
 //  Created by Marcos Felipe Souza on 21/12/18.
@@ -8,34 +8,33 @@
 
 import UIKit
 
-class BasicCoordinator: Coordinator {
-    
+class ReplacingCoordinator: Coordinator {
+    var parentCoordinator: Coordinator?    
     let window: UIWindow
-    weak var parentCoordinator: Coordinator?
+    var previousView: UIViewController
     var currentView: UIViewController?
-    var previousView: UIViewController!
     
-    init(window: UIWindow, parentCoordinator: Coordinator?, previousView: UIViewController) {
+    init(window: UIWindow, parentCoordinator: Coordinator, previousView: UIViewController) {
         self.window = window
         self.parentCoordinator = parentCoordinator
         self.previousView = previousView
     }
     
     func start() {
-        let basicView = LoginView(coordinator: self)
-        self.currentView = basicView
+        self.currentView = ReplaceView(coordinator: self)
         self.previousView.present(self.currentView!, animated: true, completion: nil)
     }
     
     private func dismiss() {
-        self.currentView?.dismiss(animated: true, completion: nil)
+        self.currentView!.dismiss(animated: true, completion: nil)
     }
+    
 }
 
-extension BasicCoordinator {
+extension ReplacingCoordinator {
     func handle(_ action: Event) {
         switch action {
-        case LoginFlow.finish:
+        case ReplaceFlow.finish:
             self.dismiss()
         default:
             self.dismiss()

@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum LoginFlow: Event {
+    case finish
+}
+
 class LoginView: UIViewController {
     
     
@@ -18,7 +22,7 @@ class LoginView: UIViewController {
     @IBOutlet weak var loginTxtFieldLayoutX: NSLayoutConstraint!
     @IBOutlet weak var passwordTxtFieldLayoutX: NSLayoutConstraint!
     
-    weak var coordinator: Coordinator?
+    var coordinator: Coordinator?
     init(coordinator: Coordinator) {
         self.coordinator = coordinator
         super.init(nibName: String(describing: LoginView.self), bundle: nil)
@@ -64,7 +68,7 @@ class LoginView: UIViewController {
     var count = 0
     @IBAction func didTapLoginButton(_ sender: UIButton) {
         guard count == 0 else {
-            self.dismiss(animated: true, completion: nil)
+            self.coordinator?.handle(LoginFlow.finish)
             return
         }
         
