@@ -9,17 +9,17 @@
 import UIKit
 
 enum MainFlow: Event {    
-    case basic, replacing
+    case basic, replacing, transition, keyframe
 }
 
 enum TypeOfMenu: Int {
     case basic = 0
-    case replacing, transition, keyframing
+    case replacing, transition, keyframe
 }
 
 class MainView: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    let menuList = ["Basic", "Replacing", "KeyFraming Animation"]
+    let menuList = ["Basic", "Replacing", "Transition", "KeyFraming Animation"]
     var coordinator: Coordinator?
     init(coordinator: Coordinator) {
         super.init(nibName: String(describing: MainView.self), bundle: nil)
@@ -42,15 +42,17 @@ extension MainView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let type = TypeOfMenu(rawValue: indexPath.row)
+        guard let type = TypeOfMenu(rawValue: indexPath.row) else { return }
         switch type {
-        case .basic?:
+        case .basic:
             self.coordinator?.handle(MainFlow.basic)
-        case .replacing?:
+        case .replacing:
             self.coordinator?.handle(MainFlow.replacing)
-        default:
-            self.coordinator?.handle(MainFlow.basic)
-        }        
+        case .keyframe:
+            self.coordinator?.handle(MainFlow.keyframe)
+        case .transition:
+            self.coordinator?.handle(MainFlow.transition)
+        }
     }
 }
 

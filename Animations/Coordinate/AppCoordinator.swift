@@ -37,6 +37,11 @@ class AppCoordinator: Coordinator {
         let replacingCoordinator = ReplacingCoordinator(window: self.window, parentCoordinator: self, previousView: currentView)
         replacingCoordinator.start()
     }
+    
+    private func startKeyframe() {
+        let keyframeCoordinator = KeyframeCoordinator(window: self.window, parentCoordinator: self, previousView: currentView)
+        keyframeCoordinator.start()
+    }
 }
 
 
@@ -47,6 +52,8 @@ extension AppCoordinator {
             self.startBasicView()
         case MainFlow.replacing:
             self.startReplacing()
+        case MainFlow.keyframe:
+            self.startKeyframe()
         default:
             break
         }

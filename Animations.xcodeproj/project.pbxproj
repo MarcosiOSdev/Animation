@@ -20,6 +20,9 @@
 		D05C3C0321CC3625004FA174 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D05C3C0221CC3625004FA174 /* Assets.xcassets */; };
 		D05C3C0621CC3625004FA174 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D05C3C0421CC3625004FA174 /* LaunchScreen.storyboard */; };
 		D05C3C0F21CC37E1004FA174 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D05C3C0E21CC37E1004FA174 /* MainView.xib */; };
+		D0C92C1B21D0F7DB00FC06A2 /* KeyframeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C92C1A21D0F7DB00FC06A2 /* KeyframeCoordinator.swift */; };
+		D0C92C1E21D0F91E00FC06A2 /* KeyframeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C92C1C21D0F91E00FC06A2 /* KeyframeView.swift */; };
+		D0C92C1F21D0F91E00FC06A2 /* KeyframeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C92C1D21D0F91E00FC06A2 /* KeyframeView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		D05C3C0521CC3625004FA174 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D05C3C0721CC3625004FA174 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D05C3C0E21CC37E1004FA174 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		D0C92C1A21D0F7DB00FC06A2 /* KeyframeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyframeCoordinator.swift; sourceTree = "<group>"; };
+		D0C92C1C21D0F91E00FC06A2 /* KeyframeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyframeView.swift; sourceTree = "<group>"; };
+		D0C92C1D21D0F91E00FC06A2 /* KeyframeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyframeView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		D05C3BFA21CC3623004FA174 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				D0C92C1921D0F7C800FC06A2 /* Keyframe */,
 				D030606421CD33EA0015FDAB /* Replacing */,
 				18A1F8F121CC657F004DF8DB /* Coordinate */,
 				18A1F8EC21CC61EF004DF8DB /* Basic */,
@@ -118,6 +125,16 @@
 				D05C3C0E21CC37E1004FA174 /* MainView.xib */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		D0C92C1921D0F7C800FC06A2 /* Keyframe */ = {
+			isa = PBXGroup;
+			children = (
+				D0C92C1A21D0F7DB00FC06A2 /* KeyframeCoordinator.swift */,
+				D0C92C1C21D0F91E00FC06A2 /* KeyframeView.swift */,
+				D0C92C1D21D0F91E00FC06A2 /* KeyframeView.xib */,
+			);
+			path = Keyframe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +197,7 @@
 			files = (
 				D030606321CD21FF0015FDAB /* ReplaceView.xib in Resources */,
 				D05C3C0F21CC37E1004FA174 /* MainView.xib in Resources */,
+				D0C92C1F21D0F91E00FC06A2 /* KeyframeView.xib in Resources */,
 				D05C3C0621CC3625004FA174 /* LaunchScreen.storyboard in Resources */,
 				18A1F8F021CC621E004DF8DB /* LoginView.xib in Resources */,
 				D05C3C0321CC3625004FA174 /* Assets.xcassets in Resources */,
@@ -193,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0C92C1E21D0F91E00FC06A2 /* KeyframeView.swift in Sources */,
 				18A1F8EF21CC621E004DF8DB /* LoginView.swift in Sources */,
 				D05C3BFE21CC3623004FA174 /* MainView.swift in Sources */,
 				D05C3BFC21CC3623004FA174 /* AppDelegate.swift in Sources */,
@@ -201,6 +220,7 @@
 				D030606A21CD4F150015FDAB /* BasicCoordinator.swift in Sources */,
 				D025339321CD71FB004D8776 /* ReplacingCoordinator.swift in Sources */,
 				D030606621CD34040015FDAB /* Coordinator.swift in Sources */,
+				D0C92C1B21D0F7DB00FC06A2 /* KeyframeCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
