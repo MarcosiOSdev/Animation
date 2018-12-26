@@ -20,15 +20,25 @@ class KeyframeCoordinator: Coordinator {
         self.window = window
         self.parentCoordinator = parentCoordinator
         self.previousView = previousView
-        
     }
+    
     func start() {
-        
+        self.currentView = KeyframeView(coordinator: self)
+        self.previousView.present(self.currentView!, animated: true, completion: nil)
+    }
+    
+    private func dismiss() {
+        self.currentView?.dismiss(animated: true, completion: {})
     }
 }
 
 extension KeyframeCoordinator {
     func handle(_ action: Event) {
-        
+        switch action {
+        case KeyframeFlow.finish:
+            dismiss()
+        default:
+            dismiss()
+        }
     }
 }
