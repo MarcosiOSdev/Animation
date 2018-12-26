@@ -42,6 +42,11 @@ class AppCoordinator: Coordinator {
         let keyframeCoordinator = KeyframeCoordinator(window: self.window, parentCoordinator: self, previousView: currentView)
         keyframeCoordinator.start()
     }
+    
+    private func startTableview() {        
+        let tableviewCoordinator = TableviewCoordinator(window: self.window, parentCoordinator: self, previousView: currentView)
+        tableviewCoordinator.start()
+    }
 }
 
 
@@ -54,8 +59,10 @@ extension AppCoordinator {
             self.startReplacing()
         case MainFlow.keyframe:
             self.startKeyframe()
+        case MainFlow.tableView:
+            self.startTableview()
         default:
-            break
+            self.start()
         }
     }
 }

@@ -23,6 +23,8 @@
 		D0C92C1B21D0F7DB00FC06A2 /* KeyframeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C92C1A21D0F7DB00FC06A2 /* KeyframeCoordinator.swift */; };
 		D0C92C1E21D0F91E00FC06A2 /* KeyframeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0C92C1C21D0F91E00FC06A2 /* KeyframeView.swift */; };
 		D0C92C1F21D0F91E00FC06A2 /* KeyframeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0C92C1D21D0F91E00FC06A2 /* KeyframeView.xib */; };
+		D0F184B921D3F5D200653E57 /* TableviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F184B721D3F5D200653E57 /* TableviewView.swift */; };
+		D0F184BC21D3F6CF00653E57 /* TableviewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F184BB21D3F6CF00653E57 /* TableviewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		D0C92C1A21D0F7DB00FC06A2 /* KeyframeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyframeCoordinator.swift; sourceTree = "<group>"; };
 		D0C92C1C21D0F91E00FC06A2 /* KeyframeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyframeView.swift; sourceTree = "<group>"; };
 		D0C92C1D21D0F91E00FC06A2 /* KeyframeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = KeyframeView.xib; sourceTree = "<group>"; };
+		D0F184B721D3F5D200653E57 /* TableviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableviewView.swift; sourceTree = "<group>"; };
+		D0F184BB21D3F6CF00653E57 /* TableviewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableviewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,7 @@
 		D05C3BFA21CC3623004FA174 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
+				D0F184B621D3F59300653E57 /* TableView */,
 				D0C92C1921D0F7C800FC06A2 /* Keyframe */,
 				D030606421CD33EA0015FDAB /* Replacing */,
 				18A1F8F121CC657F004DF8DB /* Coordinate */,
@@ -135,6 +140,15 @@
 				D0C92C1D21D0F91E00FC06A2 /* KeyframeView.xib */,
 			);
 			path = Keyframe;
+			sourceTree = "<group>";
+		};
+		D0F184B621D3F59300653E57 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D0F184B721D3F5D200653E57 /* TableviewView.swift */,
+				D0F184BB21D3F6CF00653E57 /* TableviewCoordinator.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -213,11 +227,13 @@
 			files = (
 				D0C92C1E21D0F91E00FC06A2 /* KeyframeView.swift in Sources */,
 				18A1F8EF21CC621E004DF8DB /* LoginView.swift in Sources */,
+				D0F184B921D3F5D200653E57 /* TableviewView.swift in Sources */,
 				D05C3BFE21CC3623004FA174 /* MainView.swift in Sources */,
 				D05C3BFC21CC3623004FA174 /* AppDelegate.swift in Sources */,
 				D030606821CD34240015FDAB /* AppCoordinator.swift in Sources */,
 				D030606221CD21FF0015FDAB /* ReplaceView.swift in Sources */,
 				D030606A21CD4F150015FDAB /* BasicCoordinator.swift in Sources */,
+				D0F184BC21D3F6CF00653E57 /* TableviewCoordinator.swift in Sources */,
 				D025339321CD71FB004D8776 /* ReplacingCoordinator.swift in Sources */,
 				D030606621CD34040015FDAB /* Coordinator.swift in Sources */,
 				D0C92C1B21D0F7DB00FC06A2 /* KeyframeCoordinator.swift in Sources */,
